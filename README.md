@@ -75,7 +75,6 @@
       background-color: #ff4500;
     }
   </style>
-  <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
 <body>
 
