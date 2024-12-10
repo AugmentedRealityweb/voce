@@ -26,12 +26,12 @@
 
     /* Stilizarea widget-ului */
     .chat-widget {
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 400px;
-      height: 550px;
+      height: 500px;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 20px;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -76,6 +76,7 @@
       cursor: pointer;
       transition: background-color 0.3s;
     }
+
     .ar-button:hover {
       background-color: #ff4500;
     }
@@ -84,6 +85,7 @@
 </head>
 <body>
 
+  <!-- Widgetul de chat este acum centrul ecranului, fără dreptunghiul alb inutil -->
   <div class="chat-widget">
     <div class="chat-widget-header">Chat with Us</div>
     <div class="chat-widget-body" id="chat-widget-body">
