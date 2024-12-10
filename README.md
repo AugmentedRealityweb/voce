@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Resetarea marginii și padding-ului pentru întregul corp */
     body, html {
       height: 100%;
       margin: 0;
@@ -17,14 +16,12 @@
       animation: lava-animation 5s ease infinite;
     }
 
-    /* Efectul de mișcare al fundalului pentru efectul de lavă */
     @keyframes lava-animation {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
-    /* Stilizarea widget-ului */
     .chat-widget {
       position: fixed;
       top: 50%;
@@ -39,7 +36,6 @@
       flex-direction: column;
     }
 
-    /* Header-ul widget-ului */
     .chat-widget-header {
       background-color: #a1887f;
       color: white;
@@ -60,13 +56,11 @@
       border-radius: 15px;
     }
 
-    /* Custom Widget - ElevenLabs */
     elevenlabs-convai {
       width: 100%;
       height: 100%;
     }
 
-    /* Stil pentru butoane, opțional */
     .ar-button {
       background-color: #ff6347;
       color: white;
@@ -85,11 +79,9 @@
 </head>
 <body>
 
-  <!-- Widgetul de chat este acum centrul ecranului, fără dreptunghiul alb inutil -->
   <div class="chat-widget">
     <div class="chat-widget-header">Chat with Us</div>
     <div class="chat-widget-body" id="chat-widget-body">
-      <!-- Widget content will load here -->
       <elevenlabs-convai agent-id="5mz0QGMTS6vciobpmiXO"></elevenlabs-convai>
       <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
     </div>
