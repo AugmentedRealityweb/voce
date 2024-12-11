@@ -37,7 +37,7 @@
     <img src="https://imgcdn.stablediffusionweb.com/2024/9/5/55a97e6e-da03-4b93-b393-43b31121d1d7.jpg" alt="First Image">
   </div>
   <div class="image-container" onclick="openPage('https://augmentedrealityweb.github.io/spiderman/')">
-    <img src="https://static.posters.cz/image/1300/postere/spider-man-gotcha-i127936.jpg" alt="Second Image">
+    <img src="https://i.giphy.com/1qErVv5GVUac8uqBJU.webp" alt="Second Image">
   </div>
 
   <script>
