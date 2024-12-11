@@ -65,7 +65,6 @@
     <div class="chat-widget-body">
       <!-- Widget content stânga -->
       <elevenlabs-convai agent-id="5mz0QGMTS6vciobpmiXO"></elevenlabs-convai>
-      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
     </div>
   </div>
 
@@ -74,7 +73,6 @@
     <div class="chat-widget-body">
       <!-- Widget content dreapta -->
       <elevenlabs-convai agent-id="sNEfrsQUklzPW2Hu6VGg"></elevenlabs-convai>
-      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
     </div>
   </div>
 
@@ -83,7 +81,7 @@
     <div id="paywall-content">
       <h1>Accesul la conținut este limitat</h1>
       <p>Pentru a continua vizionarea, te rugăm să efectuezi plata:</p>
-      <a href="https://revolut.me/r/oXoYVOfoyM" target="_blank">Click aici pentru plată</a>
+      <a href="https://revolut.me/r/oXoYVOfoyM" target="_blank" rel="noopener noreferrer">Click aici pentru plată</a>
     </div>
   </div>
 
@@ -92,6 +90,13 @@
     setTimeout(function() {
       document.getElementById('paywall').style.display = 'block';
     }, 20000);
+
+    // Load ElevenLabs Convai widgets only once
+    const script = document.createElement('script');
+    script.src = "https://elevenlabs.io/convai-widget/index.js";
+    script.async = true;
+    script.type = "text/javascript";
+    document.body.appendChild(script);
   </script>
 </body>
 </html>
