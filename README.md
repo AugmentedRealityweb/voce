@@ -62,14 +62,16 @@
 <body>
   <!-- Agent stânga -->
   <div class="chat-widget">
-    <iframe src="https://elevenlabs.io/convai-widget/?agent-id=5mz0QGMTS6vciobpmiXO" 
-            style="width: 100%; height: 100%; border: none;"></iframe>
+    <div class="chat-widget-body">
+      <elevenlabs-convai agent-id="5mz0QGMTS6vciobpmiXO"></elevenlabs-convai>
+    </div>
   </div>
 
   <!-- Agent dreapta -->
   <div class="chat-widget">
-    <iframe src="https://elevenlabs.io/convai-widget/?agent-id=sNEfrsQUklzPW2Hu6VGg" 
-            style="width: 100%; height: 100%; border: none;"></iframe>
+    <div class="chat-widget-body">
+      <elevenlabs-convai agent-id="sNEfrsQUklzPW2Hu6VGg"></elevenlabs-convai>
+    </div>
   </div>
 
   <!-- Paywall overlay -->
@@ -82,6 +84,23 @@
   </div>
 
   <script>
+    // Adăugare script ElevenLabs
+    const script1 = document.createElement('script');
+    script1.src = "https://elevenlabs.io/convai-widget/index.js";
+    script1.async = true;
+    script1.onload = function() {
+      console.log("Widget stânga încărcat");
+    };
+    document.body.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.src = "https://elevenlabs.io/convai-widget/index.js";
+    script2.async = true;
+    script2.onload = function() {
+      console.log("Widget dreapta încărcat");
+    };
+    document.body.appendChild(script2);
+
     // Afișează paywall-ul după 20 de secunde
     setTimeout(function() {
       document.getElementById('paywall').style.display = 'block';
