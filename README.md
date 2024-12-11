@@ -62,20 +62,14 @@
 <body>
   <!-- Agent stânga -->
   <div class="chat-widget">
-    <div class="chat-widget-body">
-      <!-- Widget content stânga -->
-      <elevenlabs-convai agent-id="5mz0QGMTS6vciobpmiXO"></elevenlabs-convai>
-      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-    </div>
+    <iframe src="https://elevenlabs.io/convai-widget/?agent-id=5mz0QGMTS6vciobpmiXO" 
+            style="width: 100%; height: 100%; border: none;"></iframe>
   </div>
 
   <!-- Agent dreapta -->
   <div class="chat-widget">
-    <div class="chat-widget-body">
-      <!-- Widget content dreapta -->
-      <elevenlabs-convai agent-id="sNEfrsQUklzPW2Hu6VGg"></elevenlabs-convai>
-      <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
-    </div>
+    <iframe src="https://elevenlabs.io/convai-widget/?agent-id=sNEfrsQUklzPW2Hu6VGg" 
+            style="width: 100%; height: 100%; border: none;"></iframe>
   </div>
 
   <!-- Paywall overlay -->
