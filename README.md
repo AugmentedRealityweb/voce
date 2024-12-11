@@ -1,55 +1,67 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment Integration</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f0f0;
       margin: 0;
-      padding: 0;
-      background: #000;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: 20px;
     }
 
-    .image-container {
-      margin: 10px;
-      cursor: pointer;
-      transition: transform 0.3s;
-      border-radius: 50%;
-      overflow: hidden;
-      width: 150px;
-      height: 150px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    #content {
+      display: none;
+      margin-top: 20px;
     }
 
-    .image-container:hover {
-      transform: scale(1.1);
-    }
-
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .payment-option {
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
-  <div class="image-container" onclick="openPage('https://augmentedrealityweb.github.io/elsa/')">
-    <img src="https://i.pinimg.com/originals/bc/cd/8d/bccd8d514024b3547ef6d05843ce4864.gif" alt="First Image">
+  <h1>Welcome to the App</h1>
+  <p id="timer">You have 10 seconds of free usage!</p>
+  <div id="content">
+    <h2>Enjoy the app!</h2>
+    <p>Interactive content goes here.</p>
   </div>
-  <div class="image-container" onclick="openPage('https://augmentedrealityweb.github.io/spiderman/')">
-    <img src="https://i.giphy.com/1qErVv5GVUac8uqBJU.webp" alt="Second Image">
+  <div id="payment" style="display: none;">
+    <h2>Time Expired</h2>
+    <p>Please purchase more time to continue:</p>
+    <div class="payment-option">
+      <a href="https://revolut.me/r/9ouIF7WVBU" target="_blank">10 minutes - 15 RON</a>
+    </div>
+    <div class="payment-option">
+      <a href="https://revolut.me/r/qTzpX33NT1" target="_blank">30 minutes - 25 RON</a>
+    </div>
+    <div class="payment-option">
+      <a href="https://revolut.me/r/Z0QtuDZnEQ" target="_blank">60 minutes - 50 RON</a>
+    </div>
   </div>
-
   <script>
-    function openPage(page) {
-      window.location.href = page;
-    }
+    let timer = 10;
+    const timerElement = document.getElementById("timer");
+    const contentElement = document.getElementById("content");
+    const paymentElement = document.getElementById("payment");
+
+    const interval = setInterval(() => {
+      timer -= 1;
+      timerElement.textContent = `You have ${timer} seconds of free usage!`;
+      if (timer <= 0) {
+        clearInterval(interval);
+        timerElement.style.display = "none";
+        contentElement.style.display = "none";
+        paymentElement.style.display = "block";
+      }
+    }, 1000);
+
+    // Simulate access extension after payment manually
+    // Example: set contentElement.style.display = "block" and paymentElement.style.display = "none" after verifying payment
   </script>
 </body>
 </html>
