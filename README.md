@@ -18,6 +18,13 @@
       margin: 10px;
       cursor: pointer;
       transition: transform 0.3s;
+      border-radius: 50%;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .image-container:hover {
@@ -25,10 +32,9 @@
     }
 
     .image-container img {
-      max-width: 300px;
-      max-height: 300px;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border: 2px solid #fff;
     }
   </style>
 </head>
