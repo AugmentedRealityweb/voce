@@ -34,7 +34,7 @@
 </head>
 <body>
   <div class="image-container" onclick="openPage('https://augmentedrealityweb.github.io/elsa/')">
-    <img src="https://imgcdn.stablediffusionweb.com/2024/9/5/55a97e6e-da03-4b93-b393-43b31121d1d7.jpg" alt="First Image">
+    <img src="https://i.pinimg.com/originals/bc/cd/8d/bccd8d514024b3547ef6d05843ce4864.gif" alt="First Image">
   </div>
   <div class="image-container" onclick="openPage('https://augmentedrealityweb.github.io/spiderman/')">
     <img src="https://i.giphy.com/1qErVv5GVUac8uqBJU.webp" alt="Second Image">
